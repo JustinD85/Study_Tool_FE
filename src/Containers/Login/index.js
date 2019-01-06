@@ -1,8 +1,8 @@
 import React from 'react';
 import uuid from 'uuid/v1';
+import Person from '../Person';
 
-const Login = ({handleNewUser, profiles}) => {
-  console.log(profiles);
+const Login = ({handleNewUser,handleLogin, profiles}) => {
   const iterableProfiles = Object.values(profiles);
 
   return(
@@ -11,10 +11,11 @@ const Login = ({handleNewUser, profiles}) => {
         <button onClick={handleNewUser}>New User</button>
         {
           iterableProfiles
-          .map(person => <button
+          .map(person => <Person
                            key={uuid()}
-                           login={person}
-                         >{person.firstName}</button>)
+                           person={person}
+                           login={handleLogin}
+                         />)
         }
       </h1>
   );

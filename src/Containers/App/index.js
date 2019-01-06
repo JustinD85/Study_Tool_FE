@@ -5,9 +5,15 @@ import Login from '../../Containers/Login';
 import CreateUser from '../../Components/CreateUser';
 
 class App extends Component {
-
+  constructor(){
+    super();
+    this.state = {
+      currentUser:null,
+      currentView:null
+    };
+  }
   //replace with fetch call
-  setStateFromSources(users){
+  setStateFromSources = (users) => {
     this.setState({vocabulary,users});
   }
 
@@ -22,7 +28,7 @@ class App extends Component {
     this.setState(
       {
         users:newState,
-        currentView:null
+        currentView: ''
       }
     );
 
@@ -37,12 +43,17 @@ class App extends Component {
       />});
   }
 
+  handleLogin = (user) => {
+    this.setState({currentUser:user});
+  }
+
   renderApp = () =>{
     const{currentView, users} = this.state;
     return currentView ||
       <Login
         handleNewUser={this.handleNewUser}
-        profiles={{...users}}
+        profiles={users}
+        handleLogin={this.handleLogin}
       />;
   }
 
@@ -51,7 +62,7 @@ class App extends Component {
     return (
       <div className="App">
         {
-          this.state ? this.renderApp() : <h1>Loading</h1>
+          this.state.vocabulary ? this.renderApp() : <h1>Loading</h1>
         }
       </div>
     );
