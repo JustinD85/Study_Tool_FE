@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './';
-import Login from '../Login';
+//import Login from '../Login';
 import { shallow } from 'enzyme';
 import vocabulary from '../../Data/js_fishing';
 
@@ -11,7 +11,6 @@ describe('<App/>', () => {
   beforeEach(() => {
     wrapper = shallow(
       <App />);
-    wrapper.setState({vocabulary});
   });
 
   it('renders without crashing', () => {
@@ -29,9 +28,8 @@ describe('<App/>', () => {
   });
 
 
-  it('should render login page',()=>{
-    expect(wrapper.find(Login)).toHaveLength(1);
-  })
-
+  it('should render login component',()=>{
+    expect(wrapper.find('Login')).toHaveLength(1);
+  });
 
 });
