@@ -1,29 +1,32 @@
 import React, { Component } from 'react';
 import './App.css';
 import vocabulary from '../../Data/js_fishing';
-import Login from '../../Components/Login';
+import Login from '../../Containers/Login';
 import CreateUser from '../../Components/CreateUser';
 
 class App extends Component {
 
   //replace with fetch call
-  setVocabulary(){
-    this.setState({vocabulary});
+  setStateFromSources(users){
+    this.setState({vocabulary,users});
   }
 
 
   componentDidMount(){
-    this.setVocabulary();
+    const users = JSON.parse(localStorage.getItem('jsFishing'));
+    this.setStateFromSources(users);
   }
 
   handleCreateUser = (newUser) => {
+    const newState = {...this.state.users,...newUser};
     this.setState(
       {
-        users:{...newUser}
+        users:newState,
+        currentView:null
       }
     );
 
-    localStorage.setItem('jsFishing', JSON.stringify(this.state));
+    localStorage.setItem('jsFishing', JSON.stringify(newState));
   }
 
   handleNewUser = () => {
@@ -35,7 +38,12 @@ class App extends Component {
   }
 
   renderApp = () =>{
-    return this.state.currentView || <Login handleNewUser={this.handleNewUser}/>;
+    const{currentView, users} = this.state;
+    return currentView ||
+      <Login
+        handleNewUser={this.handleNewUser}
+        profiles={{...users}}
+      />;
   }
 
   render() {
