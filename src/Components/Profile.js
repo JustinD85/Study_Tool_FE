@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
 
-class Profile extends Component{
+class Profile extends Component {
 
 
   render() {
-    return <h1>{this.props.person.firstName +`'s Profile`}</h1>
+    const { firstName, lastName, email } = this.props.person;
+    console.log(this.props.person);
+    return (
+      <div>
+        <main>
+        <section>{firstName}</section>
+        <section>{lastName}</section>
+        <section>{email}</section>
+        </main>
+        
+      </div>
+    )
   }
 }
 

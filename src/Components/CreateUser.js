@@ -16,16 +16,20 @@ class CreateUser extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     var shouldGoBack = event.target.innerText === "Back";
-    
+
     if (shouldGoBack) {
-      this.changeView(null)
+      this.changeView('login')
     } else {
       const { firstName, lastName, email } = this.state;
       this.createUser({
         [email]: {
           firstName,
           lastName,
-          email
+          email,
+          html:null,
+          js:null,
+          css:null,
+          turing:null
         }
       });
     }

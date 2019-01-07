@@ -1,12 +1,13 @@
-.Controller{
+.MainContent{
   display:flex;
   width:100%;
 }
+
 .controller-menu{
   position: relative;
   background:peru;
   height:100%;
-  width:20%;
+  max-width:20%;
 
   button{
     position: absolute;

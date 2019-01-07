@@ -3,14 +3,15 @@ import '../styles/Main.scss';
 import vocabulary from '../Data/js_fishing';
 import Login from './Login';
 import CreateUser from './CreateUser';
-import Controller from './Controller';
+import MainContent from './MainContent';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      currentUser: null,
-      currentView: null
+      currentUser: '',
+      userStatus: 'login',
+      users:{}
     };
   }
 
@@ -36,7 +37,8 @@ class App extends Component {
 
     this.setState({
       vocabulary: vocab,
-      users
+      users,
+      userStatus: 'login'
     });
   }
 
@@ -51,7 +53,7 @@ class App extends Component {
     this.setState(
       {
         users: newState,
-        currentView: ''
+        userStatus: 'login'
       }
     );
 
@@ -60,49 +62,55 @@ class App extends Component {
 
   handleNewUser = () => {
     this.setState({
-      currentView:
-        <CreateUser
-          createUser={this.handleCreateUser}
-          changeView={this.handleChangeView}
-        />
+      userStatus: 'createUser'
     });
   }
 
   handleLogin = (userId) => {
-    this.setState(
-      {
-        currentUser: userId,
-        currentView: <Controller
-          user={this.state.users[userId]}
-          vocabulary={this.state.vocabulary}
-          handleAppView={this.handleChangeView}
-        />
-      }
-    );
-  }
-
-  handleChangeView = (currentView) => {
     this.setState({
-      currentView
+      currentUser: userId,
+      userStatus: 'mainContent'
     });
   }
 
-  renderApp = () => {
-    const { currentView, users } = this.state;
-    return currentView ||
-      <Login
-        handleNewUser={this.handleNewUser}
-        handleLogin={this.handleLogin}
-        profileIcons={users}
-      />;
+  handleChangeView = (userStatus) => {
+
+    this.setState({
+      userStatus
+    });
+  }
+
+  changeUserStatus = () => {
+    const { userStatus, users, currentUser } = this.state;
+    console.log(users,currentUser)
+    const statusOptions =
+    {
+      login:
+        <Login
+          handleNewUser={this.handleNewUser}
+          handleLogin={this.handleLogin}
+          profileIcons={users}
+        />,
+      mainContent:
+        <MainContent
+          user={users[currentUser]}
+          vocabulary={this.state.vocabulary}
+          handleAppView={this.handleChangeView}
+        />,
+      createUser:
+        <CreateUser
+          createUser={this.handleCreateUser}
+          changeView={this.handleChangeView}
+        />
+    }
+    return statusOptions[userStatus];
   }
 
   render() {
-
     return (
       <div className="App">
         {
-          this.state.vocabulary ? this.renderApp() : <h1>Loading</h1>
+          this.state.vocabulary ? this.changeUserStatus() : <h1>Loading</h1>
         }
       </div>
     );

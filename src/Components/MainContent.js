@@ -3,7 +3,7 @@ import Game from './Game';
 import Train from './Train';
 import Profile from './Profile';
 
-class Controller extends Component {
+class MainContent extends Component {
   constructor(props) {
     super(props);
     const { user, vocabulary } = this.props;
@@ -21,7 +21,7 @@ class Controller extends Component {
   handleControllerView = (viewId) => {
     this.setState({
       viewId
-    })
+    });
   }
 
   render() {
@@ -30,7 +30,7 @@ class Controller extends Component {
     const { handleControllerView } = this;
 
     return (
-      <div className="Controller">
+      <div className="MainContent">
         <nav className="controller-menu">
           <h1>Js Fishing</h1>
           <ul>
@@ -44,7 +44,7 @@ class Controller extends Component {
               Play
               </li>
           </ul>
-          <button onClick={() => handleAppView(null)}>Back</button>
+          <button onClick={() => handleAppView('login')}>Back</button>
         </nav>
         {views[viewId]}
         {/*console.log(Object.entries(vocabuary).map())*/}
@@ -58,4 +58,4 @@ class Controller extends Component {
   }
 }
 
-export default Controller;
+export default MainContent;
