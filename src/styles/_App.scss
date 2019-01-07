@@ -2,6 +2,9 @@
   height: 100vh;
   width: 100vw;
   background: #83B59A;
-  display:flex;
+  display: flex;
 }
 
+* {
+  box-sizing: border-box;
+}
