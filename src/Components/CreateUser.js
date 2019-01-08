@@ -26,10 +26,10 @@ class CreateUser extends Component {
           firstName,
           lastName,
           email,
-          html:null,
-          js:null,
-          css:null,
-          turing:null
+          html_elements: { count: [] },
+          javascript:{ count: [] },
+          cascading_style_sheets:{ count: [] },
+          mod_one_vocab:{ count: [] }
         }
       });
     }
