@@ -27,7 +27,6 @@ describe('<App/>', () => {
     expect(wrapper.state()).not.toBeNull();
   });
 
-
   it('should render login component', () => {
     expect(wrapper.find('Login')).toHaveLength(1);
   });

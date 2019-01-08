@@ -1,9 +1,40 @@
-.Train{
-  width:80%;
-  padding:10%;
+.Train {
+  display: grid;
+  grid-template-areas:
+    "title title title "
+    "vocab definition definition"
+    "vocab filter filter";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr 1fr;
+  width: 80%;
+  padding: 3%;
 
-  .vocab-list{
-    height:60%;
-    overflow: auto;
+  h1 {
+    grid-area: title;
+    text-align: center;
   }
+
+  .vocab-list {
+    grid-area: vocab;
+    min-width: 170px;
+    overflow: auto;
+
+    .selected-word {
+      color: red;
+    }
+
+    ul {
+      list-style-type: none;
+      li{
+        text-align: center;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .train-definition {
+    grid-area: definition;
+    width: 60%
+  }
+
 }

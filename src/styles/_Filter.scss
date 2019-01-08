@@ -1,0 +1,23 @@
+.Filter{
+  grid-area: filter;
+  text-align: center;
+h1{
+  height:10%;
+}
+  ul{
+    list-style-type: none;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    height:90%;
+
+    li{
+      justify-self: center;
+      width:80%;
+      margin:1%;
+      background:#5712E2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
