@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Main.scss';
-import vocabulary from '../Data/js_fishing';
+import topics from '../Data/js_fishing';
 import Login from './Login';
 import CreateUser from './CreateUser';
 import MainContent from './MainContent';
@@ -11,7 +11,8 @@ class App extends Component {
     this.state = {
       currentUser: '',
       userStatus: 'login',
-      users:{}
+      users: {},
+      topics:null
     };
   }
 
@@ -31,14 +32,13 @@ class App extends Component {
   //replace with fetch call
   setStateFromSources = (users) => {
     let vocab;
-    if (vocabulary) {
-      vocab = this.convertObjectToMap(vocabulary);
+    if (topics) {
+      vocab = this.convertObjectToMap(topics);
     }
 
     this.setState({
-      vocabulary: vocab,
-      users,
-      userStatus: 'login'
+      topics: vocab,
+      users: users || {}
     });
   }
 
@@ -82,7 +82,6 @@ class App extends Component {
 
   changeUserStatus = () => {
     const { userStatus, users, currentUser } = this.state;
-    console.log(users,currentUser)
     const statusOptions =
     {
       login:
@@ -94,7 +93,7 @@ class App extends Component {
       mainContent:
         <MainContent
           user={users[currentUser]}
-          vocabulary={this.state.vocabulary}
+          topics={this.state.topics}
           handleAppView={this.handleChangeView}
         />,
       createUser:
@@ -110,7 +109,7 @@ class App extends Component {
     return (
       <div className="App">
         {
-          this.state.vocabulary ? this.changeUserStatus() : <h1>Loading</h1>
+          this.state.topics ? this.changeUserStatus() : <h1>Loading</h1>
         }
       </div>
     );

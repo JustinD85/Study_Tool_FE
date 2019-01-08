@@ -11,7 +11,7 @@ const Login = ({ handleNewUser, handleLogin, profileIcons }) => {
         Javascript Fishing
       </h1>
       {
-        iterableProfileIcons && 
+        iterableProfileIcons &&
         iterableProfileIcons
           .map(person => <LoginIcon
             key={uuid()}
