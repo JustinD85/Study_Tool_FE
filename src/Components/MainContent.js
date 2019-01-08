@@ -6,27 +6,32 @@ import Profile from './Profile';
 class MainContent extends Component {
   constructor(props) {
     super(props);
-    const { user, vocabulary } = this.props;
     this.state = {
-      user,
-      viewId: 'profile',
-      views: {
-        game: <Game info={{ ...this.props }}/>,
-        train: <Train vocabulary={vocabulary} />,
-        profile: <Profile person={user} />
-      }
+      status: 'profile',
     }
   }
 
-  handleControllerView = (viewId) => {
+  handleControllerView = (status) => {
+
     this.setState({
-      viewId
+      status
     });
   }
 
+  userStatus = () => {
+    const { status } = this.state;
+    const { topics, user } = this.props;
+    const userStatus = {
+      game: <Game info={{ ...this.props }} />,
+      train: <Train topics={topics} info={{ ...this.props }} />,
+      profile: <Profile person={user} info={{ ...this.props }} />
+    }
+
+    return userStatus[status];
+  }
+
   render() {
-    const { views, viewId, user } = this.state;
-    const { handleAppView } = this.props;
+    const { user, handleAppView } = this.props;
     const { handleControllerView } = this;
 
     return (
@@ -46,14 +51,8 @@ class MainContent extends Component {
           </ul>
           <button onClick={() => handleAppView('login')}>Back</button>
         </nav>
-        {views[viewId]}
-        {/*console.log(Object.entries(vocabuary).map())*/}
-        {/*Object.keys(vocabulary).map(category=>{
-          return <li>category</li>;
-        })*/}
-
+        {this.userStatus()}
       </div>
-
     );
   }
 }
