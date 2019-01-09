@@ -4,7 +4,7 @@
   .game-sky {
     display: flex;
     background: lightcyan;
-    height: 33%;
+    height: 50%;
     width: 100%;
 
     .game-status{
@@ -14,19 +14,23 @@
     }
     .game-definition {
       flex:2;
+      font-size:2rem;
     }
 
     .game-definition-score {
       flex:1;
+      font-size:2rem;
     }
 
     .game-user-score {
       flex:1;
+      font-size:2rem;
     }
   }
 
   .game-ocean {
-    height: 67%;
+    position: relative;
+    height: 50%;
     width: 100%;
     background: cadetblue;
   }

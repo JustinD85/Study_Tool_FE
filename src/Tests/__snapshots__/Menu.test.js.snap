@@ -1,3 +1,318 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Menu/> should match the snapshot 1`] = `undefined`;
+exports[`<Menu/> should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Menu
+    user={
+      Object {
+        "user": Object {
+          "cascading_style_sheets": Object {
+            "words": Array [],
+          },
+          "email": "me@me.com",
+          "firstName": "Justin",
+          "html_elements": Object {
+            "words": Array [],
+          },
+          "javascript": Object {
+            "words": Array [
+              "var",
+            ],
+          },
+          "lastName": "Duncan",
+          "mod_one_vocab": Object {
+            "words": Array [],
+          },
+          "score": 150,
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Js Fishing
+        </h1>,
+        <ul>
+          <li
+            onClick={[Function]}
+          >
+            undefined's Profile
+          </li>
+          <li
+            onClick={[Function]}
+          >
+            Train
+          </li>
+          <li
+            onClick={[Function]}
+          >
+            Play
+          </li>
+        </ul>,
+        <button
+          onClick={[Function]}
+        >
+          Back
+        </button>,
+      ],
+      "className": "Menu",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Js Fishing",
+        },
+        "ref": null,
+        "rendered": "Js Fishing",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              onClick={[Function]}
+            >
+              undefined's Profile
+            </li>,
+            <li
+              onClick={[Function]}
+            >
+              Train
+            </li>,
+            <li
+              onClick={[Function]}
+            >
+              Play
+            </li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "undefined's Profile",
+              "className": undefined,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "undefined's Profile",
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Train",
+              "className": undefined,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Train",
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Play",
+              "className": undefined,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Play",
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Back",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Back",
+        "type": "button",
+      },
+    ],
+    "type": "nav",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Js Fishing
+          </h1>,
+          <ul>
+            <li
+              onClick={[Function]}
+            >
+              undefined's Profile
+            </li>
+            <li
+              onClick={[Function]}
+            >
+              Train
+            </li>
+            <li
+              onClick={[Function]}
+            >
+              Play
+            </li>
+          </ul>,
+          <button
+            onClick={[Function]}
+          >
+            Back
+          </button>,
+        ],
+        "className": "Menu",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Js Fishing",
+          },
+          "ref": null,
+          "rendered": "Js Fishing",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                onClick={[Function]}
+              >
+                undefined's Profile
+              </li>,
+              <li
+                onClick={[Function]}
+              >
+                Train
+              </li>,
+              <li
+                onClick={[Function]}
+              >
+                Play
+              </li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "undefined's Profile",
+                "className": undefined,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "undefined's Profile",
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Train",
+                "className": undefined,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Train",
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Play",
+                "className": undefined,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Play",
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Back",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Back",
+          "type": "button",
+        },
+      ],
+      "type": "nav",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

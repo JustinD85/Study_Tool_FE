@@ -4,8 +4,8 @@ let user = {
     lastName: "Duncan",
     email: "me@me.com",
     score: 150,
-    html_elements: { words: ['var'] },
-    javascript: { words: [] },
+    html_elements: { words: [] },
+    javascript: { words: ['var'] },
     cascading_style_sheets: { words: [] },
     mod_one_vocab: { words: [] }
   }

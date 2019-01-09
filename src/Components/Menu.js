@@ -33,7 +33,7 @@ class Menu extends Component {
             Play
         </li>
         </ul>
-        <button onClick={(e) => handleAppView('login',e)}>Back</button>
+        <button className="back-button" onClick={(e) => handleAppView('login',e)}>Back</button>
       </nav>
     )
   }

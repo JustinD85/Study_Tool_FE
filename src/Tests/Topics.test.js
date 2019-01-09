@@ -7,7 +7,7 @@ describe('<Topics/>', () => {
 
   beforeEach(() => {
     wrapper = shallow(
-      <Topics />
+      <Topics topics={new Map()} />
     );
   });
 

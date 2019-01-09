@@ -1254,12 +1254,12 @@ ShallowWrapper {
           "email": "me@me.com",
           "firstName": "Justin",
           "html_elements": Object {
+            "words": Array [],
+          },
+          "javascript": Object {
             "words": Array [
               "var",
             ],
-          },
-          "javascript": Object {
-            "words": Array [],
           },
           "lastName": "Duncan",
           "mod_one_vocab": Object {
@@ -1291,7 +1291,7 @@ ShallowWrapper {
             className="game-definition game-status"
           >
              
-            This operator returns the quotient of a divisor and a dividend
+            This basic datatype is used to store a collection of data
           </span>
           <span
             className="game-definition-score game-status"
@@ -1312,22 +1312,22 @@ ShallowWrapper {
           <Fish
             index={0}
             setUserScore={[Function]}
-            word="division"
+            word="let"
           />
           <Fish
             index={1}
             setUserScore={[Function]}
-            word="null"
+            word="undefined"
           />
           <Fish
             index={2}
             setUserScore={[Function]}
-            word="forEach_(Array)"
+            word="some"
           />
           <Fish
             index={3}
             setUserScore={[Function]}
-            word="has_(Set)"
+            word="object"
           />
         </div>,
       ],
@@ -1345,7 +1345,7 @@ ShallowWrapper {
               className="game-definition game-status"
             >
                
-              This operator returns the quotient of a divisor and a dividend
+              This basic datatype is used to store a collection of data
             </span>,
             <span
               className="game-definition-score game-status"
@@ -1371,14 +1371,14 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 " ",
-                "This operator returns the quotient of a divisor and a dividend",
+                "This basic datatype is used to store a collection of data",
               ],
               "className": "game-definition game-status",
             },
             "ref": null,
             "rendered": Array [
               " ",
-              "This operator returns the quotient of a divisor and a dividend",
+              "This basic datatype is used to store a collection of data",
             ],
             "type": "span",
           },
@@ -1430,22 +1430,22 @@ ShallowWrapper {
             <Fish
               index={0}
               setUserScore={[Function]}
-              word="division"
+              word="let"
             />,
             <Fish
               index={1}
               setUserScore={[Function]}
-              word="null"
+              word="undefined"
             />,
             <Fish
               index={2}
               setUserScore={[Function]}
-              word="forEach_(Array)"
+              word="some"
             />,
             <Fish
               index={3}
               setUserScore={[Function]}
-              word="has_(Set)"
+              word="object"
             />,
           ],
           "className": "game-ocean",
@@ -1454,12 +1454,12 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "d7f5deb6-0c18-4eb8-acd0-37567f65c117",
             "nodeType": "class",
             "props": Object {
               "index": 0,
               "setUserScore": [Function],
-              "word": "division",
+              "word": "let",
             },
             "ref": null,
             "rendered": null,
@@ -1467,12 +1467,12 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "ea5542ac-8734-4915-94b0-5eb11ee16215",
             "nodeType": "class",
             "props": Object {
               "index": 1,
               "setUserScore": [Function],
-              "word": "null",
+              "word": "undefined",
             },
             "ref": null,
             "rendered": null,
@@ -1480,12 +1480,12 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "3c3842c6-bc8e-4700-9e81-38c7e9fa4c53",
             "nodeType": "class",
             "props": Object {
               "index": 2,
               "setUserScore": [Function],
-              "word": "forEach_(Array)",
+              "word": "some",
             },
             "ref": null,
             "rendered": null,
@@ -1493,12 +1493,12 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "c9a3c2bc-12b9-4524-a47b-34ffe43c0168",
             "nodeType": "class",
             "props": Object {
               "index": 3,
               "setUserScore": [Function],
-              "word": "has_(Set)",
+              "word": "object",
             },
             "ref": null,
             "rendered": null,
@@ -1524,7 +1524,7 @@ ShallowWrapper {
               className="game-definition game-status"
             >
                
-              This operator returns the quotient of a divisor and a dividend
+              This basic datatype is used to store a collection of data
             </span>
             <span
               className="game-definition-score game-status"
@@ -1545,22 +1545,22 @@ ShallowWrapper {
             <Fish
               index={0}
               setUserScore={[Function]}
-              word="division"
+              word="let"
             />
             <Fish
               index={1}
               setUserScore={[Function]}
-              word="null"
+              word="undefined"
             />
             <Fish
               index={2}
               setUserScore={[Function]}
-              word="forEach_(Array)"
+              word="some"
             />
             <Fish
               index={3}
               setUserScore={[Function]}
-              word="has_(Set)"
+              word="object"
             />
           </div>,
         ],
@@ -1578,7 +1578,7 @@ ShallowWrapper {
                 className="game-definition game-status"
               >
                  
-                This operator returns the quotient of a divisor and a dividend
+                This basic datatype is used to store a collection of data
               </span>,
               <span
                 className="game-definition-score game-status"
@@ -1604,14 +1604,14 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   " ",
-                  "This operator returns the quotient of a divisor and a dividend",
+                  "This basic datatype is used to store a collection of data",
                 ],
                 "className": "game-definition game-status",
               },
               "ref": null,
               "rendered": Array [
                 " ",
-                "This operator returns the quotient of a divisor and a dividend",
+                "This basic datatype is used to store a collection of data",
               ],
               "type": "span",
             },
@@ -1663,22 +1663,22 @@ ShallowWrapper {
               <Fish
                 index={0}
                 setUserScore={[Function]}
-                word="division"
+                word="let"
               />,
               <Fish
                 index={1}
                 setUserScore={[Function]}
-                word="null"
+                word="undefined"
               />,
               <Fish
                 index={2}
                 setUserScore={[Function]}
-                word="forEach_(Array)"
+                word="some"
               />,
               <Fish
                 index={3}
                 setUserScore={[Function]}
-                word="has_(Set)"
+                word="object"
               />,
             ],
             "className": "game-ocean",
@@ -1687,12 +1687,12 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "d7f5deb6-0c18-4eb8-acd0-37567f65c117",
               "nodeType": "class",
               "props": Object {
                 "index": 0,
                 "setUserScore": [Function],
-                "word": "division",
+                "word": "let",
               },
               "ref": null,
               "rendered": null,
@@ -1700,12 +1700,12 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "ea5542ac-8734-4915-94b0-5eb11ee16215",
               "nodeType": "class",
               "props": Object {
                 "index": 1,
                 "setUserScore": [Function],
-                "word": "null",
+                "word": "undefined",
               },
               "ref": null,
               "rendered": null,
@@ -1713,12 +1713,12 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "3c3842c6-bc8e-4700-9e81-38c7e9fa4c53",
               "nodeType": "class",
               "props": Object {
                 "index": 2,
                 "setUserScore": [Function],
-                "word": "forEach_(Array)",
+                "word": "some",
               },
               "ref": null,
               "rendered": null,
@@ -1726,12 +1726,12 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "c9a3c2bc-12b9-4524-a47b-34ffe43c0168",
               "nodeType": "class",
               "props": Object {
                 "index": 3,
                 "setUserScore": [Function],
-                "word": "has_(Set)",
+                "word": "object",
               },
               "ref": null,
               "rendered": null,

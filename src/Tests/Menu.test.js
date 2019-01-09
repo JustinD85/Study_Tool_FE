@@ -1,13 +1,14 @@
 import React from 'react';
 import Menu from '../Components/Menu';
 import { shallow } from 'enzyme';
+import user from './mockUser'
 
 describe('<Menu/>', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
-      <Menu />
+      <Menu user={user}/>
     );
   });
 

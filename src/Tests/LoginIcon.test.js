@@ -7,7 +7,7 @@ describe('<LoginIcon/>', () => {
 
   beforeEach(() => {
     wrapper = shallow(
-      <LoginIcon />
+      <LoginIcon person={{firstName:'J', email:'e'}} />
     );
   });
 

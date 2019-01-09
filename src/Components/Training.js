@@ -41,6 +41,7 @@ class Training extends Component {
         if (isCSSVocab) {
           currentDefinition = currentDefinition.get('description');
         }
+
         this.setState({ currentDefinition, currentWord });
       }
     });

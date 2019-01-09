@@ -1,24 +1,30 @@
-.Filter{
+.Filter {
   grid-area: filterWord;
   text-align: center;
-h1{
-  height:10%;
-}
-  ul{
-    list-style-type: none;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    height:90%;
 
-    li{
-      background:rgba(0, 0, 0, 0.32);
+  h1 {
+    height: 10%;
+  }
+
+  ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 90%;
+
+    li {
+      background: rgba(0, 0, 0, 0.32);
       border-radius: 25px;
       justify-self: center;
-      width:80%;
-      margin:1%;
+      width: 80%;
+      margin: 1%;
       display: flex;
       justify-content: center;
       align-items: center;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

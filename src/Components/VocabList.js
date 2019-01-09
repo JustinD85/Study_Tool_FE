@@ -4,7 +4,7 @@ import uuid from 'uuid';
 class VocabList extends Component {
 
   changeToJSX(word) {
-    const { handleSelectWord, currentWord, user } = this.props;
+    const { handleSelectWord, currentWord } = this.props;
     return (<li
       onClick={(e) => handleSelectWord(e.target.innerText)}
       key={uuid()}

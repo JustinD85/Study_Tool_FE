@@ -1,10 +1,13 @@
 .Menu{
   grid-area: menu;
   display:grid;
-  background:#816868;
+  background: radial-gradient(circle, rgba(251, 105, 228, 1) 6%, rgba(87, 18, 226, 1) 83%);
   height:100%;
   min-width:fit-content;
   padding:1%;
+  h1{
+    color:rgba(251, 105, 228, .6);
+  }
   ul{
     li{
       display: grid;
@@ -12,11 +15,25 @@
       align-content: center;
       height:4rem;
       margin: 20px 0;
-      background:#FB69E4;
+      border-radius: 25px;
+      background: radial-gradient(circle, rgba(251, 105, 228, 1) 6%, rgba(87, 18, 226, 1) 83%);
+      box-shadow: 2px 2px 5px #5712E2;
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
-  button{
+  .back-button{
     position: absolute;
-    bottom:0;
+    bottom:-15px;
+    left:-10px;
+    padding:35px;
+    border-radius: 35px;
+    background:rgba(251, 105, 228, .6);
+    border:none;
+    box-shadow: 2px -2px 7px rgba(251, 105, 228, .6);
+    &:hover{
+      cursor: pointer;
+    }
   }
 }

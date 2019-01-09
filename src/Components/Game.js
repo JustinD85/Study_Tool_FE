@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Fish from './Fish';
+import uuid from 'uuid'
 
 class Game extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class Game extends Component {
       fishWords: [],
       currentDefinition: null,
       currentWord: null,
-      currentTopic:null
+      currentTopic: null
     }
   }
 
@@ -31,7 +32,11 @@ class Game extends Component {
       section.get('vocabulary').forEach((definition, word) => {
         if (!user[currentTopic].words.includes(word)) {
           possibleWords.push(word);
-          possibleDefinitions.push(definition);
+          const isCSSVocab = typeof definition === 'object';
+          if (isCSSVocab) {
+            definition = definition.get('description');
+          }
+          possibleDefinitions.push(definition)
         };
       });
     });
@@ -70,7 +75,11 @@ class Game extends Component {
 
   decrementPoints = () => {
     const wordWorth = this.state.wordWorth - 4;
-    this.setState({ wordWorth });
+    if (wordWorth < 1) {
+      this.setUserScore();
+    } else {
+      this.setState({ wordWorth });
+    }
   }
 
   componentDidMount() {
@@ -82,12 +91,12 @@ class Game extends Component {
   componentWillUnmount() {
     clearInterval(this.state.intervalId);
   }
-  
+
   setUserScore = (e) => {
     let { currentWord, currentTopic, wordWorth } = this.state;
     let { user, handleSaveToStorage } = this.props.info;
     let userWords = user[currentTopic].words;
-    let selWord = e.target.closest('.Fish').dataset.id;
+    let selWord = e ? e.target.closest('.Fish').dataset.id : '';
 
     if (selWord === currentWord) {
       user.score += wordWorth;
@@ -101,15 +110,14 @@ class Game extends Component {
     this.selectTopic();
     handleSaveToStorage();
     clearInterval(this.state.intervalId);
-    this.state.wordWorth = 100;
     const intervalId = setInterval(this.decrementPoints, 1000);
-    this.setState({ intervalId })
+    this.setState({ intervalId, wordWorth:100 })
   }
 
 
   render() {
     const { score } = this.props.info.user;
-    const { wordWorth, currentDefinition, currentWord, fishWords } = this.state;
+    const { wordWorth, currentDefinition, fishWords } = this.state;
     return (
       <div className="Game">
         <div className="game-sky">
@@ -118,7 +126,12 @@ class Game extends Component {
           <span className="game-user-score game-status">Score:{score}</span>
         </div>
         <div className="game-ocean">
-          {fishWords.map((word, i) => <Fish word={word} index={i} setUserScore={this.setUserScore} />)}
+          {fishWords.map((word, i) => <Fish key={uuid()}
+            word={word} index={i}
+            top={'170px'}
+            setUserScore={this.setUserScore}
+
+          />)}
         </div>
       </div>
     );
