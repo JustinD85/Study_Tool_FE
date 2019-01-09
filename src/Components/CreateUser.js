@@ -2,34 +2,34 @@ import React, { Component } from 'react';
 
 class CreateUser extends Component {
 
-  constructor({ createUser, changeView }) {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       firstName: '',
       lastName: '',
       email: ''
     };
-    this.createUser = createUser;
-    this.changeView = changeView;
   }
 
   handleSubmit = (event) => {
+    const { handleCreateUser, handleChangeView } = this.props;
     event.preventDefault();
     var shouldGoBack = event.target.innerText === "Back";
 
     if (shouldGoBack) {
-      this.changeView('login')
+      handleChangeView('login')
     } else {
       const { firstName, lastName, email } = this.state;
-      this.createUser({
+      handleCreateUser({
         [email]: {
           firstName,
           lastName,
           email,
-          html_elements: { count: [] },
-          javascript:{ count: [] },
-          cascading_style_sheets:{ count: [] },
-          mod_one_vocab:{ count: [] }
+          score: 0,
+          html_elements: { words: [] },
+          javascript: { words: [] },
+          cascading_style_sheets: { words: [] },
+          mod_one_vocab: { words: [] }
         }
       });
     }

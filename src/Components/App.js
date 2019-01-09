@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Main.scss';
-import topics from '../Data/js_fishing';
+import { topics } from '../Data/js_fishing';
 import Login from './Login';
 import CreateUser from './CreateUser';
 import MainContent from './MainContent';
@@ -12,13 +12,12 @@ class App extends Component {
       currentUser: '',
       userStatus: 'login',
       users: {},
-      topics:null
+      topics
     };
   }
 
   convertObjectToMap = (obj) => {
     let map = new Map();
-
     for (let key of Object.keys(obj)) {
       if (obj[key] instanceof Object) {
         map.set(key, this.convertObjectToMap(obj[key]));
@@ -30,34 +29,42 @@ class App extends Component {
   }
 
   //replace with fetch call
-  setStateFromSources = (users) => {
-    let vocab;
-    if (topics) {
-      vocab = this.convertObjectToMap(topics);
-    }
+  setStateFromSources = () => {
+    let users = JSON.parse(localStorage.getItem('jsFishing'));
+    const topics = this.convertObjectToMap(this.state.topics);//importing from top of file
 
+    //add function to each user that counts the words
+    // maybe some class that gives methods to it?
+    if (!users) {
+      const emptyObj = JSON.stringify({});
+      localStorage.setItem('jsFishing', emptyObj);
+      users = {};
+    }
+    // console.log(this.convertObjectToMap(users))
     this.setState({
-      topics: vocab,
-      users: users || {}
+      topics,
+      users
     });
   }
 
-  componentDidMount() {
-    const users = JSON.parse(localStorage.getItem('jsFishing'));
-    this.setStateFromSources(users);
+  saveToStorage =()=> {
+    localStorage.setItem('jsFishing', JSON.stringify(this.state.users));
+  }
 
+  componentDidMount() {
+    this.setStateFromSources();
   }
 
   handleCreateUser = (newUser) => {
-    const newState = { ...this.state.users, ...newUser };
+    const users = { ...this.state.users, ...newUser };
     this.setState(
       {
-        users: newState,
+        users,
         userStatus: 'login'
       }
     );
 
-    localStorage.setItem('jsFishing', JSON.stringify(newState));
+    localStorage.setItem('jsFishing', JSON.stringify(users));
   }
 
   handleNewUser = () => {
@@ -88,18 +95,19 @@ class App extends Component {
         <Login
           handleNewUser={this.handleNewUser}
           handleLogin={this.handleLogin}
-          profileIcons={users}
+          users={users}
         />,
       mainContent:
         <MainContent
           user={users[currentUser]}
           topics={this.state.topics}
           handleAppView={this.handleChangeView}
+          handleSaveToStorage={this.saveToStorage}
         />,
       createUser:
         <CreateUser
-          createUser={this.handleCreateUser}
-          changeView={this.handleChangeView}
+          handleCreateUser={this.handleCreateUser}
+          handleChangeView={this.handleChangeView}
         />
     }
     return statusOptions[userStatus];
