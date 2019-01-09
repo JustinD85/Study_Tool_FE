@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Game from './Game';
-import Train from './Train';
+import Training from './Training';
+import Menu from './Menu';
 import Profile from './Profile';
 
 class MainContent extends Component {
@@ -11,7 +12,7 @@ class MainContent extends Component {
     }
   }
 
-  handleControllerView = (status) => {
+  handleContentView = (status) => {
 
     this.setState({
       status
@@ -20,11 +21,10 @@ class MainContent extends Component {
 
   userStatus = () => {
     const { status } = this.state;
-    const { topics, user } = this.props;
     const userStatus = {
       game: <Game info={{ ...this.props }} />,
-      train: <Train topics={topics} info={{ ...this.props }} />,
-      profile: <Profile person={user} info={{ ...this.props }} />
+      train: <Training info={{ ...this.props }} />,
+      profile: <Profile info={{ ...this.props }} />
     }
 
     return userStatus[status];
@@ -32,25 +32,16 @@ class MainContent extends Component {
 
   render() {
     const { user, handleAppView } = this.props;
-    const { handleControllerView } = this;
+    const { handleContentView } = this;
 
     return (
       <div className="MainContent">
-        <nav className="controller-menu">
-          <h1>Js Fishing</h1>
-          <ul>
-            <li onClick={() => handleControllerView('profile')}>
-              {user.firstName + '\'s Profile'}
-            </li>
-            <li onClick={() => handleControllerView('train')}>
-              Train
-              </li>
-            <li onClick={() => handleControllerView('game')}>
-              Play
-              </li>
-          </ul>
-          <button onClick={() => handleAppView('login')}>Back</button>
-        </nav>
+        <Menu
+          handleContentView={handleContentView}
+          handleAppView={handleAppView}
+          user={user}
+          currentView={this.state.status}
+        />
         {this.userStatus()}
       </div>
     );
