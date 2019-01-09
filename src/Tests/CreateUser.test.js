@@ -16,7 +16,7 @@ describe('<CreateUser/>', () => {
     wrapper = shallow(
       <CreateUser
         handleChangeView={handleChangeViewMock}
-        handleCreateUserMock={handleCreateUserMock}
+        handleCreateUser={handleCreateUserMock}
       />
     );
   });
@@ -39,7 +39,7 @@ describe('<CreateUser/>', () => {
 
   it('should track user form data entry', () => {
     expect(wrapper.state('firstName')).toEqual('');
-    wrapper.instance().handleChange({ target: { 'firstName': 'Justin' } });
+    wrapper.instance().handleChange({ target: { name: 'firstName', value: 'Justin' } }  );
     expect(wrapper.state('firstName')).toEqual('Justin');
   })
 });
