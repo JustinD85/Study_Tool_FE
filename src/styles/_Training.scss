@@ -1,0 +1,75 @@
+.Training {
+  display: grid;
+  grid-template-areas:
+    "vocab title . "
+    "vocab filterWord filterWord"
+    "vocab definition definition";
+  width: 90%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  padding: 3%;
+
+  .training-title {
+    grid-area: title;
+    justify-self: center;
+    width: 250px;
+    padding: 1rem;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 3rem;
+    background: rgba(0, 0, 0, 0.32);
+    border-radius: 50%;
+  }
+
+  .vocab-container {
+    grid-area: vocab;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    justify-content: space-around;
+
+    h2 {
+      align-self: self-end;
+      justify-self: center;
+      font-size: 2rem;
+      animation: small-size-increase infinite 5s;
+    }
+
+    @keyframes small-size-increase {
+      0%,
+      100% {
+        text-shadow: 0px 0px 1px pink;
+        // font-size: 2rem;
+      }
+
+      50% {
+        text-shadow: 2px 2px 3px pink;
+        // font-size: 2.02rem;
+      }
+    }
+
+    .vocab-list {
+      min-width: fit-content;
+      overflow: auto;
+      list-style-type: none;
+      border-radius: 25px;
+      padding: 2%;
+      background: rgba(0, 0, 0, 0.32);
+
+
+
+      li {
+        font-size: 3rem;
+      }
+
+      .selected-word {
+        color: red;
+      }
+    }
+  }
+
+
+
+
+
+
+}
