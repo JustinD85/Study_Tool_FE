@@ -1,5 +1,5 @@
 .Filter{
-  grid-area: filter;
+  grid-area: filterWord;
   text-align: center;
 h1{
   height:10%;
@@ -11,10 +11,11 @@ h1{
     height:90%;
 
     li{
+      background:rgba(0, 0, 0, 0.32);
+      border-radius: 25px;
       justify-self: center;
       width:80%;
       margin:1%;
-      background:#5712E2;
       display: flex;
       justify-content: center;
       align-items: center;
