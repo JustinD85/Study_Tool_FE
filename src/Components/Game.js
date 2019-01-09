@@ -11,7 +11,8 @@ class Game extends Component {
       possibleDefinitions: [],
       fishWords: [],
       currentDefinition: null,
-      currentWord: null
+      currentWord: null,
+      currentTopic:null
     }
   }
 
@@ -19,7 +20,7 @@ class Game extends Component {
     return Math.floor(Math.random() * num);
   }
 
-  showRandomDefinition = () => {
+  selectTopic = () => {
     const { topics, user } = this.props.info;
     let allTopics = [...topics.keys()];
     let index = Math.floor(Math.random() * allTopics.length);
@@ -73,7 +74,7 @@ class Game extends Component {
   }
 
   componentDidMount() {
-    this.showRandomDefinition();
+    this.selectTopic();
     const intervalId = setInterval(this.decrementPoints, 1000);
     this.setState({ intervalId })
   }
@@ -81,6 +82,7 @@ class Game extends Component {
   componentWillUnmount() {
     clearInterval(this.state.intervalId);
   }
+  
   setUserScore = (e) => {
     let { currentWord, currentTopic, wordWorth } = this.state;
     let { user, handleSaveToStorage } = this.props.info;
@@ -96,7 +98,7 @@ class Game extends Component {
       }
     }
 
-    this.showRandomDefinition();
+    this.selectTopic();
     handleSaveToStorage();
     clearInterval(this.state.intervalId);
     this.state.wordWorth = 100;
