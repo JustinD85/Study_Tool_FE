@@ -2,14 +2,12 @@
   grid-area: definition;
   display:grid;
   padding: 5%;
-  // grid-template-areas: 
-  // "word "
-  // "definition";
+
 .word{
-  // grid-area: word;
+  font-size: 2rem;
 }
 .definition{
-  // grid-area: definition;
+  font-size: 2rem;
 }
 
   justify-items: center;
