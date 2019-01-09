@@ -1,0 +1,93 @@
+.Profile {
+
+  display: grid;
+  text-align: center;
+  margin: 10% auto;
+  grid-template-areas:
+    ". profile  profile ."
+    "javascript mastery mastery html"
+    ". css turing .";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  color: whitesmoke;
+
+  .profile-user-info {
+    font-size: 2em;
+    border-radius: 25px;
+    box-shadow: 1px 1px 10px black;
+  }
+
+  section {
+    margin: 10px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px #5712E2;
+    display:grid;
+    align-content: center;
+    justify-items: center;
+  }
+
+  progress {
+    border-radius: 25px;
+    background: red;
+
+    &::-webkit-progress-bar {
+      border-radius: 25px;
+      background: red;
+      // color:yellow;
+    }
+
+    &::-webkit-progress-value {
+      border-radius: 25px;
+      background: pink;
+      // color:yellow;
+    }
+  }
+
+  .animate-info {
+    background: radial-gradient(circle, rgba(251, 105, 228, 1) 6%, rgba(87, 18, 226, 1) 83%);
+    animation: hello 3s infinite;
+    max-height:150px;
+  }
+
+.profile-mastery{
+  grid-area: mastery;
+  font-size: 2rem;
+  border:none;
+  box-shadow: none;
+
+}
+
+  .profile-user-info {
+    grid-area: profile;
+  }
+
+  .profile-javascript {
+    grid-area: javascript;
+  }
+
+  .profile-css {
+    grid-area: css;
+  }
+
+  .profile-html {
+    grid-area: html;
+  }
+
+  .profile-turing {
+    grid-area: turing;
+  }
+
+}
+
+
+@keyframes hello {
+
+  0%,
+  100% {
+    background-size: 100%;
+  }
+
+  50% {
+    background-size: 104%;
+  }
+}
