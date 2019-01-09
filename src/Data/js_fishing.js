@@ -1,5 +1,5 @@
-const topics = {
 
+const topics = {
   "javascript": {
     "variables": {
       "description": "containers for storing values",
@@ -24,7 +24,7 @@ const topics = {
     "arrays": {
       "description": "Holds iterable, ordered, collection of data",
       "vocabulary": {
-        "concat": "Join several arrays into one",
+        "concat_(Array)": "Join several arrays into one",
         "from": "Creates new, shallow-copied instance from an array-like or iterable object",
         "isArray": "Method determines whether the passed value is an Array",
         "copyWithin": "Copies part of an array to another location in the same array and returns it, without modifying its size",
@@ -33,11 +33,11 @@ const topics = {
         "filter": "Method creates a new array with all elements that pass the test implemented by the provided function",
         "find": "Method returns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned",
         "findIndex": "Method returns the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1",
-        "forEach(array)": "Method executes a provided function once for each array element",
-        "includes": "Method determines whether an array includes a certain value among its entries, returning true or false as appropriate",
-        "indexOf": "Method returns the first index at which a given element can be found in the array, or -1 if it is not present",
+        "forEach_(Array)": "Method executes a provided function once for each array element",
+        "includes_(Array)": "Method determines whether an array includes a certain value among its entries, returning true or false as appropriate",
+        "indexOf_(Array)": "Method returns the first index at which a given element can be found in the array, or -1 if it is not present",
         "join": "Method creates and returns a new string by concatenating all of the elements in an array-like object, separated by commas or a specified separator string.",
-        "lastIndexOf": "Method returns the last index at which a given element can be found in the array, or -1 if it is not present",
+        "lastIndexOf_(Array)": "Method returns the last index at which a given element can be found in the array, or -1 if it is not present",
         "map": "Method creates a new array with the results of calling a provided function on every element in the calling array",
         "pop": "Method removes the last element from an array and returns that element. This method changes the length of the array",
         "push": "Method adds one or more elements to the end of an array and returns the new length of the array",
@@ -45,7 +45,7 @@ const topics = {
         "reduceRight": "Method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value",
         "reverse": "Method reverses an array in place. The first array element becomes the last, and the last array element becomes the first",
         "shift": "Method removes the first element from an array and returns that removed element. This method changes the length of the array",
-        "slice": "Method returns a copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified",
+        "slice_(Array)": "Method returns a copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified",
         "some": "Method tests whether at least one element in the array passes the test implemented by the provided function",
         "sort": "Method sorts the elements of an array in place and returns the array",
         "splice": "Method changes the contents of an array by removing or replacing existing elements and/or adding new elements",
@@ -68,12 +68,12 @@ const topics = {
     "map": {
       "description": "Object holds key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value.",
       "vocabulary": {
-        "clear": "Method removes all elements from a Map object",
-        "delete": "Method removes the specified element from a Map object",
+        "clear_(Map)": "Method removes all elements from a Map object",
+        "delete_(Map)": "Method removes the specified element from a Map object",
         "entries": "Method returns a new Iterator object that contains the [key, value] pairs for each element in the Map object in insertion order",
-        "forEach(map)": "Method executes a provided function once per each key/value pair in the Map object, in insertion order",
+        "forEach_(Map)": "Method executes a provided function once per each key/value pair in the Map object, in insertion order",
         "get": "Method returns a specified element from a Map object",
-        "has(map)": "Method returns a boolean indicating whether an element with the specified key exists or not",
+        "has_(Map)": "Method returns a boolean indicating whether an element with the specified key exists or not",
         "keys": "Method returns a new Iterator object that contains the keys for each element in the Map object in insertion order",
         "set": "Method adds or updates an element with a specified key and value to a Map object.",
         "values": "Method returns a new Iterator object that contains the values for each element in the Map object in insertion order"
@@ -86,18 +86,18 @@ const topics = {
         "fromCodePoint": "Method returns a string created by using the specified sequence of code points",
         "charAt": "Method returns a new string consisting of the single UTF-16 code unit located at the specified offset into the string",
         "charCodeAt": "Method returns an integer between 0 and 65535 representing the UTF-16 code unit at the given index",
-        "concat": "Method concatenates the string arguments to the calling string and returns a new string",
+        "concat_(String)": "Method concatenates the string arguments to the calling string and returns a new string",
         "endsWith": "Method determines whether a string ends with the characters of a specified string, returning true or false as appropriate",
-        "includes": "Method determines whether one string may be found within another string, returning true or false as appropriate",
-        "indexOf": "Method returns the index within the calling String object of the first occurrence of the specified value, -1 otherwise",
-        "lastIndexOf": "Method returns the index within the calling String object of the last occurrence of the specified value",
+        "includes_(String)": "Method determines whether one string may be found within another string, returning true or false as appropriate",
+        "indexOf_(String)": "Method returns the index within the calling String object of the first occurrence of the specified value, -1 otherwise",
+        "lastIndexOf_(String)": "Method returns the index within the calling String object of the last occurrence of the specified value",
         "match": "Method retrieves the matches when matching a string against a regular expression",
         "padEnd": "Method pads the end of the current string with a given string (repeated, if needed) so that the resulting string reaches a given length",
         "padStart": "Method pads the start of the current string with a given string (repeated, if needed) so that the resulting string reaches a given length",
         "repeat": "Method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together",
         "replace": "Method returns a new string with some or all matches of a pattern replaced by a replacement",
         "search": "Method executes a search for a match between a regular expression and this String object",
-        "slice": "Method extracts a section of a string and returns it as a new string, without modifying the original string",
+        "slice_(String)": "Method extracts a section of a string and returns it as a new string, without modifying the original string",
         "split": "Method splits a String object into an array of strings by separating the string into substrings, using a specified separator string to determine where to make each split",
         "startsWith": "Method determines whether a string begins with the characters of a specified string, returning true or false as appropriate",
         "substring": "Method returns the part of the string between the start and end indexes, or to the end of the string",
@@ -109,9 +109,9 @@ const topics = {
       "vocabulary": {
         "size": "Returns the number of elements in a Set object",
         "add": "Method appends a new element with a specified value to the end of a Set object",
-        "clear": "Method removes all elements from a Set object",
-        "delete": "Method removes the specified element from  Set object",
-        "has(set)": "Method returns a boolean indicating whether an element with the specified value exists in a Set object or not"
+        "clear_(Set)": "Method removes all elements from a Set object",
+        "delete_(Set)": "Method removes the specified element from  Set object",
+        "has_(Set)": "Method returns a boolean indicating whether an element with the specified value exists in a Set object or not"
       }
     },
     "arithmetic_operators": {
@@ -790,5 +790,4 @@ const topics = {
     }
   }
 }
-
-module.exports = topics;
+module.exports = { topics };
