@@ -1,0 +1,16 @@
+.Fish {
+  display: flex;
+  position: relative;
+  width: 150px;
+
+  .fish-svg {
+    height: 100px;
+  }
+
+  .fish-word {
+    position: absolute;
+    top:40%;
+    left:30%;
+
+  }
+}

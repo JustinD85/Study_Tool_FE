@@ -1,0 +1,35 @@
+.Game {
+  width: 100%;
+
+  .game-sky {
+    display: flex;
+    background: lightcyan;
+    height: 33%;
+    width: 100%;
+
+    .game-status{
+      height:30%;
+      padding:1%;
+      text-align: center;
+    }
+    .game-definition {
+      flex:2;
+    }
+
+    .game-definition-score {
+      flex:1;
+    }
+
+    .game-user-score {
+      flex:1;
+    }
+  }
+
+  .game-ocean {
+    height: 67%;
+    width: 100%;
+    background: cadetblue;
+  }
+
+
+}
