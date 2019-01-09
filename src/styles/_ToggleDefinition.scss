@@ -1,0 +1,20 @@
+.ToggleDefinition{
+  grid-area: definition;
+  display:grid;
+  padding: 5%;
+  // grid-template-areas: 
+  // "word "
+  // "definition";
+.word{
+  // grid-area: word;
+}
+.definition{
+  // grid-area: definition;
+}
+
+  justify-items: center;
+  // align-content: center;
+  margin:5%;
+  border-radius: 25px;
+  background:rgba(0, 0, 0, 0.32);
+}

@@ -1,0 +1,22 @@
+.Menu{
+  grid-area: menu;
+  display:grid;
+  background:#816868;
+  height:100%;
+  min-width:fit-content;
+  padding:1%;
+  ul{
+    li{
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      height:4rem;
+      margin: 20px 0;
+      background:#FB69E4;
+    }
+  }
+  button{
+    position: absolute;
+    bottom:0;
+  }
+}
