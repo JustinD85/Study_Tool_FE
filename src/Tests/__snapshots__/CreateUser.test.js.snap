@@ -1,0 +1,485 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CreateUser/> should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CreateUser />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Create User Screen
+        </h1>,
+        <form>
+          <label>
+            First Name
+            <input
+              name="firstName"
+              onChange={[Function]}
+            />
+          </label>
+          <label>
+            Last Name
+            <input
+              name="lastName"
+              onChange={[Function]}
+            />
+          </label>
+          <label>
+            Email
+            <input
+              name="email"
+              onChange={[Function]}
+            />
+          </label>
+          <button
+            onClick={[Function]}
+          >
+            Back
+          </button>
+          <button
+            onClick={[Function]}
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>,
+      ],
+      "className": "create-user-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Create User Screen",
+        },
+        "ref": null,
+        "rendered": "Create User Screen",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <label>
+              First Name
+              <input
+                name="firstName"
+                onChange={[Function]}
+              />
+            </label>,
+            <label>
+              Last Name
+              <input
+                name="lastName"
+                onChange={[Function]}
+              />
+            </label>,
+            <label>
+              Email
+              <input
+                name="email"
+                onChange={[Function]}
+              />
+            </label>,
+            <button
+              onClick={[Function]}
+            >
+              Back
+            </button>,
+            <button
+              onClick={[Function]}
+              type="submit"
+            >
+              Submit
+            </button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "First Name",
+                <input
+                  name="firstName"
+                  onChange={[Function]}
+                />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "First Name",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "name": "firstName",
+                  "onChange": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Last Name",
+                <input
+                  name="lastName"
+                  onChange={[Function]}
+                />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Last Name",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "name": "lastName",
+                  "onChange": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Email",
+                <input
+                  name="email"
+                  onChange={[Function]}
+                />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Email",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "name": "email",
+                  "onChange": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Back",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Back",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Submit",
+              "onClick": [Function],
+              "type": "submit",
+            },
+            "ref": null,
+            "rendered": "Submit",
+            "type": "button",
+          },
+        ],
+        "type": "form",
+      },
+    ],
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Create User Screen
+          </h1>,
+          <form>
+            <label>
+              First Name
+              <input
+                name="firstName"
+                onChange={[Function]}
+              />
+            </label>
+            <label>
+              Last Name
+              <input
+                name="lastName"
+                onChange={[Function]}
+              />
+            </label>
+            <label>
+              Email
+              <input
+                name="email"
+                onChange={[Function]}
+              />
+            </label>
+            <button
+              onClick={[Function]}
+            >
+              Back
+            </button>
+            <button
+              onClick={[Function]}
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>,
+        ],
+        "className": "create-user-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Create User Screen",
+          },
+          "ref": null,
+          "rendered": "Create User Screen",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <label>
+                First Name
+                <input
+                  name="firstName"
+                  onChange={[Function]}
+                />
+              </label>,
+              <label>
+                Last Name
+                <input
+                  name="lastName"
+                  onChange={[Function]}
+                />
+              </label>,
+              <label>
+                Email
+                <input
+                  name="email"
+                  onChange={[Function]}
+                />
+              </label>,
+              <button
+                onClick={[Function]}
+              >
+                Back
+              </button>,
+              <button
+                onClick={[Function]}
+                type="submit"
+              >
+                Submit
+              </button>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "First Name",
+                  <input
+                    name="firstName"
+                    onChange={[Function]}
+                  />,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "First Name",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "name": "firstName",
+                    "onChange": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Last Name",
+                  <input
+                    name="lastName"
+                    onChange={[Function]}
+                  />,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Last Name",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "name": "lastName",
+                    "onChange": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Email",
+                  <input
+                    name="email"
+                    onChange={[Function]}
+                  />,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Email",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "name": "email",
+                    "onChange": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Back",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Back",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Submit",
+                "onClick": [Function],
+                "type": "submit",
+              },
+              "ref": null,
+              "rendered": "Submit",
+              "type": "button",
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": "main",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

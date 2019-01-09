@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '../Components/App';
-//import Login from '../Login';
 import { shallow } from 'enzyme';
 import vocabulary from '../Data/js_fishing';
 

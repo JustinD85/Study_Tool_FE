@@ -1,18 +1,17 @@
 import React from 'react';
-import Login from '../Components/Login';
+import ToggleDefinition from '../Components/ToggleDefinition';
 import { shallow } from 'enzyme';
 
-describe('<Login />', () => {
+describe('<ToggleDefinition/>', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
-      <Login />);
+      <ToggleDefinition />
+    );
   });
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-
-})
+});

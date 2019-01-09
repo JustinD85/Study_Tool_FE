@@ -1,18 +1,17 @@
 import React from 'react';
-import Login from '../Components/Login';
+import Controller from '../Components/Controller';
 import { shallow } from 'enzyme';
 
-describe('<Login />', () => {
+describe('<Controller/>', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
-      <Login />);
+      <Controller />
+    );
   });
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-
-})
+});
