@@ -2,8 +2,8 @@ import React from 'react';
 import uuid from 'uuid/v1';
 import LoginIcon from './LoginIcon';
 
-const Login = ({ handleNewUser, handleLogin, profileIcons }) => {
-  const iterableProfileIcons = profileIcons && Object.values(profileIcons);
+const Login = ({ handleNewUser, handleLogin, users }) => {
+  const iterableProfileIcons = users && Object.values(users);
 
   return (
     <article className="login-container">
