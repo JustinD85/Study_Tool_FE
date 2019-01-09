@@ -117,7 +117,7 @@ class App extends Component {
     return (
       <div className="App">
         {
-          this.state.topics ? this.changeUserStatus() : <h1>Loading</h1>
+          this.state.topics ? this.changeUserStatus() : <h1 className="loading">Loading</h1>
         }
       </div>
     );
