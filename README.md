@@ -1,4 +1,4 @@
-# Learn JavaScript by playing a fishing game!
+# Learn Various Topics while fishing!
 
 ## Create an Account
 ## Browse the word/definitions in the Training Tab!
