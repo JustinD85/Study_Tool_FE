@@ -6,7 +6,7 @@
 ## You can view your Mastery on the Profile Tab!
 
 
-##Encryption
+## Encryption
 ### Installing On Mac OS X
 
 Using the brew package manager, simply run:
