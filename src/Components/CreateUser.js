@@ -7,7 +7,7 @@ class CreateUser extends Component {
     this.state = {
       firstName: '',
       lastName: '',
-      email: ''
+      email: ' '
     };
   }
 
