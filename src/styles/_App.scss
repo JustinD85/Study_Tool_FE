@@ -3,32 +3,57 @@
   width: 100vw;
   display: flex;
   background: linear-gradient(63deg, #fb69e4, #5712e2);
-background-size: 400% 400%;
+  background-size: 400% 400%;
 
--webkit-animation: AnimationName 5s ease infinite;
--moz-animation: AnimationName 5s ease infinite;
-animation: AnimationName 5s ease infinite;
+  -webkit-animation: AnimationName 5s ease infinite;
+  -moz-animation: AnimationName 5s ease infinite;
+  animation: AnimationName 5s ease infinite;
 
-@-webkit-keyframes AnimationName {
-    0%{background-position:70% 0%}
-    50%{background-position:31% 100%}
-    100%{background-position:70% 0%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:70% 0%}
-    50%{background-position:31% 100%}
-    100%{background-position:70% 0%}
-}
-@keyframes AnimationName { 
-    0%{background-position:70% 0%}
-    50%{background-position:31% 100%}
-    100%{background-position:70% 0%}
-}
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 70% 0%
+    }
+
+    50% {
+      background-position: 31% 100%
+    }
+
+    100% {
+      background-position: 70% 0%
+    }
+  }
+
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 70% 0%
+    }
+
+    50% {
+      background-position: 31% 100%
+    }
+
+    100% {
+      background-position: 70% 0%
+    }
+  }
+
+  @keyframes AnimationName {
+    0% {
+      background-position: 70% 0%
+    }
+
+    50% {
+      background-position: 31% 100%
+    }
+
+    100% {
+      background-position: 70% 0%
+    }
+  }
 }
 
 * {
   box-sizing: border-box;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
-

@@ -1,8 +1,9 @@
 import React from 'react';
 import uuid from 'uuid/v1';
 import LoginIcon from './LoginIcon';
+import { connect } from 'react-redux';
 
-const Login = ({ handleNewUser, handleLogin, users }) => {
+const Login = ({ handleNewUser, users }) => {
   const iterableProfileIcons = users && Object.values(users);
 
   return (
@@ -16,7 +17,6 @@ const Login = ({ handleNewUser, handleLogin, users }) => {
           .map(person => <LoginIcon
             key={uuid()}
             person={person}
-            login={handleLogin}
           />)
       }
       <button onClick={handleNewUser}>+</button>
@@ -24,7 +24,21 @@ const Login = ({ handleNewUser, handleLogin, users }) => {
   );
 
 }
+const mapStateToProps = (state) => {
+  return {
+    users: state.users
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleNewUser: () => dispatch({
+      type: 'NEW_USER',
+    })
+  }
+}
 
 
-export default Login;
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
 

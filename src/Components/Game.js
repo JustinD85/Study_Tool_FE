@@ -74,7 +74,7 @@ class Game extends Component {
   }
 
   decrementPoints = () => {
-    const wordWorth = this.state.wordWorth - 4;
+    const wordWorth = this.state.wordWorth - 1;
     if (wordWorth < 1) {
       this.setUserScore();
     } else {
@@ -85,7 +85,7 @@ class Game extends Component {
   componentDidMount() {
     this.selectTopic();
     const intervalId = setInterval(this.decrementPoints, 1000);
-    this.setState({ intervalId })
+    this.setState({ intervalId });
   }
 
   componentWillUnmount() {

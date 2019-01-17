@@ -587,25 +587,25 @@ const topics = {
         "aside": "Element represents a portion of a document whose content is only indirectly related to the document's main content",
         "footer": "Element represents a footer for its nearest sectioning content or sectioning root element",
         "h1-h6": "Elements represent six levels of section headings",
-        "hgroup": " element represents a multi-level heading for a section of a document. It groups a set of <h1>–<h6> elements",
-        "main": "Element represents the dominant content of the <body> of a document, and directly related to or expands upon the central topic of document",
+        "hgroup": " element represents a multi-level heading for a section of a document. It groups a set of h1-h6 elements",
+        "main": "Element represents the dominant content of the body of a document, and directly related to or expands upon the central topic of document",
         "nav": "Element represents a section of a page whose purpose is to provide navigation links",
         "section": "Element represents a standalone section — which doesn't have a more specific semantic element to represent it"
       }
     },
     "text_content": {
-      "description": "Elements to organize blocks or sections of content placed between the opening <body> and closing </body> tags",
+      "description": "Elements to organize blocks or sections of content placed between the opening body and closing body tags",
       "vocabulary": {
         "blockquote": "Element indicates that the enclosed text is an extended quotation",
-        "dd": "Element provides the details about or the definition of the preceding term (<dt>) in a description list (<dl>)",
+        "dd": "Element provides the details about or the definition of the preceding term (dt) in a description list (dl)",
         "div": "Element is the generic container for flow content. It has no effect on the content or layout until styled using CSS",
         "dl": "Element represents a description list",
-        "dt": "Element specifies a term in a description or definition list, and as such must be used inside a <dl> element",
-        "figcaption": "Element represents a caption or legend for the rest of the contents its parent <figure> element, if any",
-        "figure": "Element represents self-contained content, frequently with a caption (<figcaption>), and is typically referenced as a single unit",
+        "dt": "Element specifies a term in a description or definition list, and as such must be used inside a dl element",
+        "figcaption": "Element represents a caption or legend for the rest of the contents its parent figure element, if any",
+        "figure": "Element represents self-contained content, frequently with a caption (figcaption), and is typically referenced as a single unit",
         "hr": "Element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic with a section",
         "li": "Element is used to represent an item in a list",
-        "main": "Element represents the dominant content of the <body> of a document",
+        "main": "Element represents the dominant content of the body of a document",
         "ol": "Element represents an ordered list of items, typically rendered as a numbered list",
         "p": "Element represents a paragraph",
         "pre": "Element represents preformatted text which is to be presented exactly as written in the HTML file",
@@ -629,8 +629,8 @@ const topics = {
         "kbd": "Element represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device",
         "mark": "Element represents text which is marked or highlighted for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context",
         "q": "Element indicates that the enclosed text is a short inline quotation",
-        "rb": "Element is used to delimit the base text component of a  <ruby> annotation",
-        "rp": "Element is used to provide fall-back parentheses for browsers that do not support display of ruby annotations using the <ruby> element",
+        "rb": "Element is used to delimit the base text component of a  ruby annotation",
+        "rp": "Element is used to provide fall-back parentheses for browsers that do not support display of ruby annotations using the ruby element",
         "rt": "Element specifies the ruby text component of a ruby annotation, which is used to provide pronunciation, translation, or transliteration information for East Asian typography",
         "s": "Element renders text with a strikethrough, or a line through it, used to represent things that are no longer relevant or no longer accurate",
         "samp": "Element is used to enclose inline text which represents sample (or quoted) output from a computer program",
@@ -647,11 +647,11 @@ const topics = {
     "image_and_multimedia": {
       "description": "HTML supports various multimedia resources such as images, audio, and video",
       "vocabulary": {
-        "area": "Element defines a hot-spot region on an image, and optionally associates it with a hypertext link. This element is used only within a <map> element",
+        "area": "Element defines a hot-spot region on an image, and optionally associates it with a hypertext link. This element is used only within a map element",
         "audio": "Element is used to embed sound content in documents",
         "img": "Element embeds an image into the document",
-        "map": "Element is used with <area> elements to define an image map",
-        "track": "Element is used as a child of the media elements <audio> and <video>. It lets you specify timed text tracks(subtitles)",
+        "map": "Element is used with area elements to define an image map",
+        "track": "Element is used as a child of the media elements audio and video. It lets you specify timed text tracks(subtitles)",
         "video": "Element embeds a media player which supports video playback into the document"
       }
     },
@@ -661,9 +661,9 @@ const topics = {
         "embed": "Element embeds external content at the specified point in the document",
         "iframe": "Element represents a nested browsing context, embedding another HTML page into the current one",
         "object": "Element represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin",
-        "param": "Element defines parameters for an <object> element",
-        "picture": "Element contains zero or more <source> elements and one <img> element to provide versions of an image for different display/device scenarios",
-        "source": "Element specifies multiple media resources for the <picture>, the <audio> element, or the <video> element"
+        "param": "Element defines parameters for an object element",
+        "picture": "Element contains zero or more source elements and one img element to provide versions of an image for different display/device scenarios",
+        "source": "Element specifies multiple media resources for the picture, the audio element, or the video element"
       }
     },
     "scripting": {
@@ -684,11 +684,11 @@ const topics = {
     "table_content": {
       "description": "The elements here are used to create and handle tabular data",
       "vocabulary": {
-        "caption": "Element specifies the caption (or title) of a table, and if used is always the first child of a <table>",
-        "col": " element defines a column within a table and is used for defining common semantics on all common cells. It is generally found within a <colgroup> element",
+        "caption": "Element specifies the caption (or title) of a table, and if used is always the first child of a table",
+        "col": " element defines a column within a table and is used for defining common semantics on all common cells. It is generally found within a colgroup element",
         "colgroup": "Element defines a group of columns within a table",
         "table": "Element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data",
-        "tbody": "Element encapsulates a set of table row (<tr> elements), indicating that they comprise the body of the table",
+        "tbody": "Element encapsulates a set of table row (tr elements), indicating that they comprise the body of the table",
         "td": "Element defines a cell of a table that contains data. It participates in the table model",
         "tfoot": "Element defines a set of rows summarizing the columns of the table",
         "th": "Element defines a cell as header of a group of table cells. The exact nature of this group is defined by the scope and headers attributes",
@@ -700,15 +700,15 @@ const topics = {
       "description": "HTML provides a number of elements which can be used together to create forms which the user can fill out and submit to the Web site or application",
       "vocabulary": {
         "buttons": "Element represents a clickable button, which can be used in forms or anywhere in a document that needs simple, standard button functionality",
-        "datalist": "Element contains a set of <option> elements that represent the values available for other controls",
-        "fieldset": "Element is used to group several controls as well as labels (<label>) within a web form",
+        "datalist": "Element contains a set of option elements that represent the values available for other controls",
+        "fieldset": "Element is used to group several controls as well as labels (label) within a web form",
         "form": "Element represents a document section that contains interactive controls for submitting information to a web server",
         "input": "Element is used to create interactive controls for web-based forms in order to accept data from the user",
         "label": "Element represents a caption for an item in a user interface",
-        "legend": "Element represents a caption for the content of its parent <fieldset>",
+        "legend": "Element represents a caption for the content of its parent fieldset",
         "meter": "Element represents either a scalar value within a known range or a fractional value",
-        "optgroup": "Element creates a grouping of options within a <select> element",
-        "option": "Element is used to define an item contained in a <select>, an <optgroup>, or a <datalist> element",
+        "optgroup": "Element creates a grouping of options within a select element",
+        "option": "Element is used to define an item contained in a select, an optgroup, or a datalist element",
         "output": "Element is a container element into which a site or app can inject the results of a calculation or the outcome of a user action",
         "progress": "Element displays an indicator showing the completion progress of a task, typically displayed as a progress bar",
         "select": "Element represents a control that provides a menu of options",
@@ -722,7 +722,7 @@ const topics = {
         "dialog": "Element represents a dialog box or other interactive component, such as an inspector or window",
         "menu": "Element represents a group of commands that a user can perform or activate",
         "menuitem": "Element represents a command that a user is able to invoke through a popup menu",
-        "summary": "Element specifies a summary, caption, or legend for a <details> element's disclosure box"
+        "summary": "Element specifies a summary, caption, or legend for a details element's disclosure box"
       }
     }
   },

@@ -1,16 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
 
-class LoginIcon extends Component {
+const LoginIcon = (props) => {
+  const { firstName, email } = props.person;
 
-  render() {
-    const { firstName, email } = this.props.person;
+  return (<button
+    className="login-profiles"
+    onClick={() => props.handleLogin(email)}>
+    {firstName}
+  </button>);
+}
 
-    return (
-      <button className="login-profiles" onClick={() => this.props.login(email)}>
-        {firstName}
-      </button>
-    );
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleLogin: (email) => dispatch({
+      type: 'LOGIN_ICON',
+      payload: email
+    })
   }
 }
 
-export default LoginIcon;
+export default connect(null, mapDispatchToProps)(LoginIcon);

@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class Fish extends Component {
 
 
-
   render() {
     const { word, index, setUserScore } = this.props;
     return (
