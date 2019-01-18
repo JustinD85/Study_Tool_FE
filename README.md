@@ -1,4 +1,4 @@
-# Learn Various Topics while fishing!
+# Learn Various Topics while Fishing!
 
 ## Create an Account
 ## Browse the word/definitions in the Training Tab!
